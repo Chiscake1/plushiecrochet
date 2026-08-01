@@ -1,0 +1,648 @@
+{
+    "temporada_activa": "diamadre",
+    "categorias_productos": [
+        {
+            "id": "escritorio",
+            "titulo": "💻 Compañeritos de escritorio",
+            "subtitulo": "(Tiernos, suaves y hechos con amor)",
+            "productos": [
+                {
+                    "imagen": "img\/peluches\/gato2.jpg",
+                    "alt": "Gato 2",
+                    "nombre": "Gato con collar",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/peluches\/flufly.jpg",
+                    "alt": "Flufly",
+                    "nombre": "Fluffy Pancake",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/peluches\/aguila.jpg",
+                    "alt": "Águila",
+                    "nombre": "Águila",
+                    "descripcion": "...",
+                    "precio": 20
+                },
+                {
+                    "imagen": "img\/peluches\/yoda.jpg",
+                    "alt": "Yoda",
+                    "nombre": "Yoda",
+                    "descripcion": "...",
+                    "precio": 20
+                },
+                {
+                    "imagen": "img\/peluches\/conejopintor.jpg",
+                    "alt": "Conejo Pintor",
+                    "nombre": "Conejo Pintor",
+                    "descripcion": "...",
+                    "precio": 23
+                },
+                {
+                    "imagen": "img\/peluches\/ponyo.jpg",
+                    "alt": "Ponyo",
+                    "nombre": "Ponyo",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img\/peluches\/gato.jpg",
+                    "alt": "Gato",
+                    "nombre": "Gato",
+                    "descripcion": "...",
+                    "precio": 25
+                },
+                {
+                    "imagen": "img\/peluches\/snoopypiloto.jpg",
+                    "alt": "Snoopy Piloto",
+                    "nombre": "Snoopy Piloto",
+                    "descripcion": "...",
+                    "precio": 28
+                },
+                {
+                    "imagen": "img\/peluches\/dannylux.jpg",
+                    "alt": "Dannylux",
+                    "nombre": "Dannylux",
+                    "descripcion": "...",
+                    "precio": 30
+                },
+                {
+                    "imagen": "img\/peluches\/stitch.jpg",
+                    "alt": "Stitch",
+                    "nombre": "Stitch",
+                    "descripcion": "...",
+                    "precio": 34
+                },
+                {
+                    "imagen": "img\/peluches\/ballenas.jpg",
+                    "alt": "Ballenas",
+                    "nombre": "Pareja de ballenas",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img\/peluches\/snoopytulipan.jpg",
+                    "alt": "Snoopy Tulipán",
+                    "nombre": "Snoopy con tulipán",
+                    "descripcion": "...",
+                    "precio": 35
+                }
+            ]
+        },
+        {
+            "id": "baby",
+            "titulo": "🍼 Para los peques de la casa",
+            "subtitulo": "",
+            "productos": [
+                {
+                    "imagen": "img\/peluches\/conejo.jpg",
+                    "alt": "Conejo",
+                    "nombre": "La conejita",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 30
+                },
+                {
+                    "imagen": "img\/peluches\/conejo2.jpeg",
+                    "alt": "Conejo",
+                    "nombre": "La conejita con vestido",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img\/peluches\/conejo3.jpeg",
+                    "alt": "Conejo",
+                    "nombre": "El conejito",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img\/peluches\/abeja.jpg",
+                    "alt": "Abeja",
+                    "nombre": "Abeja",
+                    "descripcion": "Altura: 12 pulg",
+                    "precio": 50
+                }
+            ]
+        },
+        {
+            "id": "peluches",
+            "titulo": "🧸 Peluches",
+            "subtitulo": "",
+            "productos": [
+                {
+                    "imagen": "img\/peluches\/osorojo.jpg",
+                    "alt": "Oso Rojo",
+                    "nombre": "Oso con corazón",
+                    "descripcion": "Altura: 13 pulg",
+                    "precio": 43
+                },
+                {
+                    "imagen": "img\/peluches\/gojogato.jpg",
+                    "alt": "Gojo Gato",
+                    "nombre": "Gojo Gato",
+                    "descripcion": "Altura: 13 pulg",
+                    "precio": 43
+                },
+                {
+                    "imagen": "img\/peluches\/casahongo.jfif",
+                    "alt": "Casa hongo",
+                    "nombre": "Casita hongo",
+                    "descripcion": "Altura: 13 pulg",
+                    "precio": 45
+                },
+                {
+                    "imagen": "img\/peluches\/mantaraya.jpg",
+                    "alt": "Mantarraya",
+                    "nombre": "Almohada de Mantarraya",
+                    "descripcion": "Altura: 25 pulg",
+                    "precio": 99
+                }
+            ]
+        },
+        {
+            "id": "llaveros",
+            "titulo": "🗝️ Llaveros",
+            "subtitulo": "(Pequeños, adorables y perfectos para acompañarte)",
+            "productos": [
+                {
+                    "imagen": "img\/llaveros\/ballena.jpg",
+                    "alt": "Ballena",
+                    "nombre": "Ballena",
+                    "descripcion": "...",
+                    "precio": 7
+                },
+                {
+                    "imagen": "img\/llaveros\/tulipan.jpg",
+                    "alt": "Tulipán",
+                    "nombre": "Tulipán",
+                    "descripcion": "...",
+                    "precio": 7
+                },
+                {
+                    "imagen": "img\/llaveros\/abeja.jpg",
+                    "alt": "Abeja",
+                    "nombre": "Abeja",
+                    "descripcion": "...",
+                    "precio": 12
+                },
+                {
+                    "imagen": "img\/llaveros\/tiburon.jpg",
+                    "alt": "Tiburón",
+                    "nombre": "Tiburón",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/llaveros\/medusa.jpg",
+                    "alt": "Medusa",
+                    "nombre": "Medusa",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/llaveros\/totoro.jpg",
+                    "alt": "Totoro",
+                    "nombre": "Totoro",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/llaveros\/cerveza.jpg",
+                    "alt": "Cerveza",
+                    "nombre": "Cerveza",
+                    "descripcion": "...",
+                    "precio": 17
+                },
+                {
+                    "imagen": "img\/llaveros\/tortuga.jpg",
+                    "alt": "Tortuga",
+                    "nombre": "Tortuga",
+                    "descripcion": "...",
+                    "precio": 20
+                }
+            ]
+        },
+        {
+            "id": "llaveros 2",
+            "titulo": "❤️ Para compartir con tu alma gemela",
+            "subtitulo": "",
+            "productos": [
+                {
+                    "imagen": "img\/llaveros\/ositos.jpg",
+                    "alt": "Ositos",
+                    "nombre": "Ositos",
+                    "descripcion": "...",
+                    "precio": 17
+                },
+                {
+                    "imagen": "img\/llaveros\/animales.jpg",
+                    "alt": "Animales",
+                    "nombre": "Animales",
+                    "descripcion": "...",
+                    "precio": 20
+                },
+                {
+                    "imagen": "img\/llaveros\/chimuelos.jpg",
+                    "alt": "Chimuelos",
+                    "nombre": "Chimuelos",
+                    "descripcion": "...",
+                    "precio": 20
+                }
+            ]
+        },
+        {
+            "id": "columpios",
+            "titulo": "🪑 Meciditos",
+            "subtitulo": "(Divertidos y llenos de color)",
+            "productos": [
+                {
+                    "imagen": "img\/columpios\/rosa.jpg",
+                    "alt": "Rosa",
+                    "nombre": "Rosa",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/columpios\/fantasma.jpg",
+                    "alt": "Fantasma",
+                    "nombre": "Fantasma",
+                    "descripcion": "...",
+                    "precio": 16
+                },
+                {
+                    "imagen": "img\/columpios\/pollo.jpg",
+                    "alt": "Pollo",
+                    "nombre": "Pollo",
+                    "descripcion": "...",
+                    "precio": 16
+                },
+                {
+                    "imagen": "img\/columpios\/mariposa.jpeg",
+                    "alt": "mariposa",
+                    "nombre": "Mariposa",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img\/columpios\/spiderman.webp",
+                    "alt": "Spiderman",
+                    "nombre": "Spiderman",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img\/columpios\/Milesmorales.jpg",
+                    "alt": "Miles Morales",
+                    "nombre": "Spiderman Miles Morales",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img\/columpios\/deadpool.jpeg",
+                    "alt": "Deadpool",
+                    "nombre": "Deadpool",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img\/columpios\/gallo.jpg",
+                    "alt": "Gallo",
+                    "nombre": "Gallo",
+                    "descripcion": "...",
+                    "precio": 26
+                },
+                {
+                    "imagen": "img\/columpios\/snoopy.jpg",
+                    "alt": "Snoopy",
+                    "nombre": "Snoopy",
+                    "descripcion": "...",
+                    "precio": 26
+                }
+            ]
+        },
+        {
+            "id": "pendientes",
+            "titulo": "✨ Pendientes para que tus outfits luzcan más chic",
+            "subtitulo": "",
+            "productos": [
+                {
+                    "imagen": "img\/concha.jpg",
+                    "alt": "Pendientes de caracola",
+                    "nombre": "Pendientes de caracola",
+                    "descripcion": "c\/u",
+                    "precio": 5
+                },
+                {
+                    "imagen": "img\/circular.jpg",
+                    "alt": "Pendientes en círculo",
+                    "nombre": "Pendientes en círculo",
+                    "descripcion": "...",
+                    "precio": 5
+                },
+                {
+                    "imagen": "img\/pollera.jpg",
+                    "alt": "Pendientes de pollera",
+                    "nombre": "Pendientes de pollera",
+                    "descripcion": "...",
+                    "precio": 6
+                },
+                {
+                    "imagen": "img\/yinyang.jpg",
+                    "alt": "Pendientes con doble círculo",
+                    "nombre": "Pendientes con dos aros",
+                    "descripcion": "...",
+                    "precio": 7
+                },
+                {
+                    "imagen": "img\/perla.jpg",
+                    "alt": "Pendientes con perla y estilo",
+                    "nombre": "Pendientes con perla y estilo",
+                    "descripcion": "...",
+                    "precio": 8
+                },
+                {
+                    "imagen": "img\/accesorios.jpg",
+                    "alt": "Pendientes de rosa",
+                    "nombre": "Pendientes de rosa",
+                    "descripcion": "...",
+                    "precio": 9
+                }
+            ]
+        },
+        {
+            "id": "flores",
+            "titulo": "💐 Flores que duran para siempre",
+            "subtitulo": "",
+            "productos": [
+                {
+                    "imagen": "img\/flores\/florcorazon.jpg",
+                    "alt": "flor corazón",
+                    "nombre": "Tulipan con Corazón",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/flores\/tulipansolo.jpg",
+                    "alt": "tulipán solo",
+                    "nombre": "Tulipán",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/flores\/girasol.jpg",
+                    "alt": "girasol",
+                    "nombre": "Girasol",
+                    "descripcion": "...",
+                    "precio": 25
+                },
+                {
+                    "imagen": "img\/flores\/tulipaneslila.jpg",
+                    "alt": "tulipanes lila",
+                    "nombre": "Ramo de tulipanes lila",
+                    "descripcion": "...",
+                    "precio": 28
+                },
+                {
+                    "imagen": "img\/flores\/tulipanesblanco.jpg",
+                    "alt": "tulipanes blanco",
+                    "nombre": "Ramo de tulipanes Blanco",
+                    "descripcion": "...",
+                    "precio": 28
+                },
+                {
+                    "imagen": "img\/flores\/rosa.jpg",
+                    "alt": "rosa",
+                    "nombre": "Rosa",
+                    "descripcion": "...",
+                    "precio": 39
+                }
+            ]
+        },
+        {
+            "id": "curiosidades",
+            "titulo": "🌀 Curiosidades curiosas",
+            "subtitulo": "",
+            "productos": [
+                {
+                    "imagen": "img\/Curiosidades\/marcapagina.jpg",
+                    "alt": "marca pagina",
+                    "nombre": "Marca Página",
+                    "descripcion": "c\/u",
+                    "precio": 5
+                },
+                {
+                    "imagen": "img\/Curiosidades\/separador.jfif",
+                    "alt": "marca pagina",
+                    "nombre": "Marca Página",
+                    "descripcion": "c\/u",
+                    "precio": 14
+                },
+                {
+                    "imagen": "img\/posavasos\/flornaranja.jpg",
+                    "alt": "posavasosflnaranja",
+                    "nombre": "Posavasos Flor Naranja",
+                    "descripcion": "c\/u",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/posavasos\/floramarilla.jpg",
+                    "alt": "posavasosflamarilla",
+                    "nombre": "Posavasos Flor Amarilla",
+                    "descripcion": "set de 4",
+                    "precio": 20
+                },
+                {
+                    "imagen": "img\/posavasos\/rosa.jpg",
+                    "alt": "posavasosrosa",
+                    "nombre": "Posavasos",
+                    "descripcion": "Set de 4",
+                    "precio": 20
+                },
+                {
+                    "imagen": "img\/Curiosidades\/posalentes.jpg",
+                    "alt": "posa lentes",
+                    "nombre": "Posa Lentes",
+                    "descripcion": "c\/u",
+                    "precio": 23
+                }
+            ]
+        }
+    ],
+    "categorias_entemporada": [
+        {
+            "id": "diamadre",
+            "titulo": "Día de las madres",
+            "productos": [
+                {
+                    "imagen": "img\/concha.jpg",
+                    "alt": "pendientesconcha",
+                    "nombre": "Pendientes de concha",
+                    "descripcion": "...",
+                    "precio": 5
+                },
+                {
+                    "imagen": "img\/accesorios\/pollera.jpg",
+                    "alt": "pendientes pollera",
+                    "nombre": "Pendientes de pollera",
+                    "descripcion": "...",
+                    "precio": 6
+                },
+                {
+                    "imagen": "img\/yinyang.jpg",
+                    "alt": "pendientesyinyang",
+                    "nombre": "Pendientes de doble aro",
+                    "descripcion": "...",
+                    "precio": 7
+                },
+                {
+                    "imagen": "img\/accesorios\/rosaamarillo.jpg",
+                    "alt": "Rosamarilla",
+                    "nombre": "Pendientes de rosa",
+                    "descripcion": "...",
+                    "precio": 9
+                },
+                {
+                    "imagen": "img\/Curiosidades\/separador.jfif",
+                    "alt": "separador para mamá",
+                    "nombre": "Separador de libro",
+                    "descripcion": "...",
+                    "precio": 14
+                },
+                {
+                    "imagen": "img\/flores\/tulipansolo.jpg",
+                    "alt": "tulipansolo",
+                    "nombre": "Tulipán",
+                    "descripcion": "...",
+                    "precio": 15
+                },
+                {
+                    "imagen": "img\/Curiosidades\/posalentes.jpg",
+                    "alt": "posalentes",
+                    "nombre": "Portalentes para mamá",
+                    "descripcion": "...",
+                    "precio": 23
+                },
+                {
+                    "imagen": "img\/flores\/girasol.jpg",
+                    "alt": "snoopy calabaza",
+                    "nombre": "Girasol",
+                    "descripcion": "...",
+                    "precio": 25
+                },
+                {
+                    "imagen": "img\/flores\/rosa.jpg",
+                    "alt": "rosa",
+                    "nombre": "Rosa",
+                    "descripcion": "...",
+                    "precio": 39
+                }
+            ]
+        },
+        {
+            "id": "navidad",
+            "titulo": "Navideños",
+            "productos": [
+                {
+                    "imagen": "img\/peluches\/tortuga.jpeg",
+                    "alt": "tortuganavidad",
+                    "nombre": "Tortuda navideña",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 29
+                },
+                {
+                    "imagen": "img\/peluches\/muñecogengibre.jpeg",
+                    "alt": "muñecogengibre",
+                    "nombre": "Muñeco de gengibre",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img\/navidad.jpg",
+                    "alt": "Muñeconieve",
+                    "nombre": "Muñeco de nieve",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img\/grinch.jpg",
+                    "alt": "Grinch",
+                    "nombre": "Grinch",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img\/peluches\/arbolito.jpeg",
+                    "alt": "arbolitonavidad",
+                    "nombre": "Arbolito de navidad",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img\/peluches\/snowman4.jpeg",
+                    "alt": "muñeconieve2",
+                    "nombre": "Muñeco de nieve",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img\/gengibre.jpg",
+                    "alt": "Cappuccino",
+                    "nombre": "Casita de gengibre",
+                    "descripcion": "...",
+                    "precio": 45
+                }
+            ]
+        },
+        {
+            "id": "accesorios",
+            "titulo": "Accesorios",
+            "productos": [
+                {
+                    "imagen": "img\/concha.jpg",
+                    "alt": "Pendientes caracola",
+                    "nombre": "Pendientes de caracola",
+                    "descripcion": "...",
+                    "precio": 5
+                },
+                {
+                    "imagen": "img\/circular.jpg",
+                    "alt": "Pendientes círculo",
+                    "nombre": "Pendientes en círculo",
+                    "descripcion": "...",
+                    "precio": 5
+                },
+                {
+                    "imagen": "img\/pollera.jpg",
+                    "alt": "Pendientes pollera",
+                    "nombre": "Pendientes de pollera",
+                    "descripcion": "...",
+                    "precio": 6
+                },
+                {
+                    "imagen": "img\/yinyang.jpg",
+                    "alt": "Pendientes yin yang",
+                    "nombre": "Pendientes con doble círculo",
+                    "descripcion": "...",
+                    "precio": 7
+                },
+                {
+                    "imagen": "img\/perla.jpg",
+                    "alt": "Pendientes con perla",
+                    "nombre": "Pendientes con perla y estilo",
+                    "descripcion": "...",
+                    "precio": 8
+                },
+                {
+                    "imagen": "img\/accesorios.jpg",
+                    "alt": "Aretes de rosa",
+                    "nombre": "Pendientes de rosa",
+                    "descripcion": "Color amarillo",
+                    "precio": 9
+                }
+            ]
+        }
+    ]
+}

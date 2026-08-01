@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Plushie Crochet</title>
+  <link rel="icon" href="img/logonew.png" type="image/png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script src="components.js"></script>
+</head>
+<body>
+  <script>renderHeader();</script>
+
+  <div class="hero fade-in">
+    <img src="img/hero.png" alt="Plushie Crochet" class="hero-img">
+    <div class="hero-overlay">
+      <h1>Plushie Crochet</h1>
+      <p>Ternura hecha a mano, punto por punto.</p>
+      <a href="/productos" class="btn-primary">Ver productos</a>
+    </div>
+  </div>
+
+  <!-- Sección En Temporada -->
+  <article class="section section-warm">
+    <h2 class="section-title fade-in">En Temporada</h2>
+    <p class="section-subtitle fade-in">Explora nuestras categorías más populares de la temporada.</p>
+
+    <div class="category-grid" id="index-temporada-grid">
+      <!-- Se cargarán dinámicamente desde productos.json -->
+      <div style="text-align:center; padding:20px; color:var(--text-light); grid-column:1/-1;">Cargando temporadas...</div>
+    </div>
+  </article>
+
+  <!-- ¿Cómo funciona el pedido? -->
+  <section class="section how-it-works fade-in">
+    <h2 class="section-title">¿Cómo hacer tu pedido?</h2>
+    <p class="section-subtitle">Consigue tu peluche perfecto en 3 simples pasos</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-icon">🧸</div>
+        <h3>Elige tu plushie</h3>
+        <p>Explora nuestro catálogo y encuentra el peluche o accesorio que más te encante. ¡Todos están hechos a mano con mucho amor!</p>
+      </div>
+      <div class="step-connector">→</div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-icon">💬</div>
+        <h3>Escríbenos por WhatsApp</h3>
+        <p>Contáctanos directamente con el nombre del producto. Te confirmamos disponibilidad, precio y coordinamos la entrega.</p>
+      </div>
+      <div class="step-connector">→</div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-icon">🎁</div>
+        <h3>¡Recibe tu peluche!</h3>
+        <p>Coordinamos la entrega o punto de recogida. Cada pedido sale empacado con cariño y listo para regalar.</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="https://wa.me/50768691897" class="btn-primary" target="_blank" rel="noopener noreferrer">
+        💬 ¡Hacer mi pedido ahora!
+      </a>
+    </div>
+  </section>
+
+  <!-- Reseñas de Clientes -->
+  <section class="section section-warm fade-in">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <p class="section-subtitle">Cada pedido está hecho con amor, y ellos lo sienten 💕</p>
+    <div class="testimonials-grid" id="testimonials-grid">
+      <!-- Se cargan dinámicamente -->
+      <div style="text-align:center; color:var(--secondary-color); padding:30px; grid-column:1/-1;">Cargando reseñas...</div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="/contacto" class="btn-outline">✍️ Dejar mi reseña</a>
+    </div>
+  </section>
+
+  <section class="section fade-in">
+    <h2 class="section-title">Y aquí un snoopy relax</h2>
+    <div class="video-container">
+      <video src="img/videosnoopy.mp4" controls style="width: 100%; display: block;"></video>
+    </div>
+  </section>
+
+  <script>renderFooter();</script>
+
+  <script>
+    // Cargar reseñas desde la API
+    fetch('api_publico.php?action=get_resenas')
+      .then(r => r.json())
+      .then(res => {
+        const grid = document.getElementById('testimonials-grid');
+        if (!res.success || res.data.length === 0) {
+          grid.innerHTML = `
+            <div style="text-align:center; color:var(--secondary-color); padding:30px; grid-column:1/-1;">
+              ¡Sé el primero en dejar tu reseña! 
+              <a href="/contacto" style="color:var(--primary-color); font-weight:600;">Ir a Contacto →</a>
+            </div>`;
+          return;
+        }
+        grid.innerHTML = res.data.map(r => {
+          const stars = '⭐'.repeat(r.estrellas);
+          const inicial = r.nombre.charAt(0).toUpperCase();
+          return `
+            <div class="testimonial-card">
+              <div class="stars">${stars}</div>
+              <p class="testimonial-text">"${r.comentario}"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">${inicial}</div>
+                <div>
+                  <strong>${r.nombre}</strong>
+                  <span>${r.fecha || ''}</span>
+                </div>
+              </div>
+            </div>`;
+        }).join('');
+      })
+      .catch(() => {
+        document.getElementById('testimonials-grid').innerHTML = `
+          <div style="text-align:center; color:var(--secondary-color); padding:40px; grid-column:1/-1;">
+            <p style="font-size:1.2rem; margin-bottom:15px;">Aún no hay reseñas publicadas.</p>
+            <a href="/contacto" class="btn-outline">✍️ ¡Sé el primero en dejar una reseña!</a>
+          </div>`;
+      });
+
+    // Cargar categorías En Temporada dinámicamente
+    fetch('productos.json')
+      .then(r => r.json())
+      .then(data => {
+        const grid = document.getElementById('index-temporada-grid');
+        let visibles = [];
+        if (data.categorias_entemporada) {
+          visibles = data.categorias_entemporada.filter(cat => cat.mostrar_en_inicio !== false);
+        }
+
+        if (visibles.length > 0) {
+          grid.innerHTML = visibles.map(cat => `
+            <div class="category-card fade-in">
+              <img src="${cat.imagen || 'img/navidad.jpg'}" alt="${cat.titulo}" class="category-img">
+              <h3 style="margin-bottom: 15px;">${cat.titulo}</h3>
+              <a href="/entemporada?season=${cat.id}" class="btn-outline">Ver Categoría</a>
+            </div>
+          `).join('');
+        } else {
+          grid.innerHTML = '<div style="text-align:center; padding:20px; color:var(--text-light); grid-column:1/-1;">No hay categorías disponibles por ahora.</div>';
+        }
+      })
+      .catch(err => console.error("Error cargando categorías:", err));
+  </script>
+</body>
+</html>

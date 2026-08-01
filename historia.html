@@ -4,145 +4,60 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre Nosotros | Plushie Crochet</title>
-  <link rel="icon" href="img/logo 1.png" type="image/png">
-
-  <style>
-    @media (max-width: 768px) {
-      #menuButton {
-        display: block !important;
-      }
-
-      #navLinks {
-        width: 100%;
-        display: none;
-        padding-top: 10px;
-      }
-
-      #navLinks.show {
-        display: block;
-      }
-
-      #menu {
-        flex-direction: column !important;
-        gap: 10px;
-      }
-
-      #menu a {
-        font-size: 20px;
-        padding: 10px 0;
-      }
-    }
-  </style>
-
+  <link rel="icon" href="img/logonew.png" type="image/png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script src="components.js"></script>
 </head>
-<body style="background-color:#f5f5dc; color:#5C4033;">
+<body>
+  <script>renderHeader();</script>
 
-  <header style="display: flex; align-items: center; padding: 15px 20px; background-color: #fffafc; flex-wrap: wrap;">
-    <img src="img/logo 1.png" alt="nuestro logo" style="width: 150px; margin-right: 20px;">
-    
-    <div class="textos" style="flex: 1;">
-      <h1 style="margin: 0; font-size: 28px; color: #A0522D; display: inline-block;">Plushie Crochet</h1>
-      <h1 style="margin: 0; font-size: 14px; color: #A0522D; display: inline-block; vertical-align: middle;">PTY</h1>
-      <p style="margin: 0; font-size: 22px; color: #A0522D;">Tejidos personalizados | Encuentra el regalo ideal</p>
-    </div>
-
-    <!-- Botón hamburguesa -->
-    <button onclick="toggleMenu()" style="display: none; font-size: 28px; background: none; border: none; cursor: pointer; color: #A0522D;" id="menuButton">
-      ☰
-    </button>
-
-    <!-- Menú -->
-    <div id="navLinks" style="margin-left: auto; padding: 15px 20px; font-family: 'Poppins', sans-serif; font-size: 25px;">
-      <nav id="menu" style="display: flex; flex-direction: row; gap: 25px;">
-        <a href="index.html" style="color: #A0522D; text-decoration: none;">Inicio</a>
-        <a href="Entemporada.html" style="color: #A0522D; text-decoration: none;">En temporada</a>
-        <a href="productos.html" style="color: #A0522D; text-decoration: none;">Productos</a>
-        <a href="historia.html" style="color: #A0522D; text-decoration: none;">Historia</a>
-        <a href="contacto.html" style="color: #A0522D; text-decoration: none;">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <script>
-    function toggleMenu() {
-      var nav = document.getElementById("navLinks");
-      nav.classList.toggle("show");
-    }
-  </script>
-
-
-  <div id="historia" style="padding:1px 15px; background-color:#f1e4d3;">
-    <h2 style="color:#73503B; font-size:2.5em; text-align:center;">Nuestra Historia</h2>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; max-width:1000px; margin:0 auto; gap:20px;">
-      <div style="flex:1; min-width:300px; padding:20px; font-size:18px; color:#73503B; text-align:justify;">
+  <div class="section section-warm fade-in">
+    <h2 class="section-title">Nuestra Historia</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; max-width:1000px; margin:0 auto; gap:40px;">
+      <div style="flex:1; min-width:300px; font-size:1.1rem; color:var(--text-main); text-align:justify; line-height: 1.8;">
         <p>Lo que comenzó como un simple pasatiempo, hoy se ha convertido en algo mucho más grande de lo que imaginamos. Todo surgió de manera casual, cuando mi hermana empezó a tejer por hobby, como una actividad que disfrutaba en su tiempo libre.<br><br>
-
         Fue entonces cuando se me ocurrió la idea de vender sus creaciones. Para ayudarla, me ofrecí a encargarme por completo de la página de Instagram: gestionaba los pedidos, respondía mensajes y mantenía el perfil activo.<br><br>
-
         Con el tiempo, la respuesta del público fue mucho mayor de lo que esperábamos. Empezaron a llegar muchísimos pedidos y la demanda creció tanto, que ya no era posible manejarlo todo entre una sola persona.<br><br>
-
         Fue en ese momento cuando decidí aprender a tejer también, para poder cumplir con todos los encargos. Así, se fué transformando en un proyecto lleno de creatividad y trabajo en equipo.</p>
       </div>
-      <div style="flex:1; min-width:300px; padding:20px;">
-        <img src="img/bazar.jpg" alt="stitch" style="max-width:100%; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+      <div style="flex:1; min-width:300px;">
+        <img src="img/bazar.jpg" alt="Historia" style="width:100%; border-radius:var(--border-radius-lg); box-shadow:var(--shadow-hover);">
       </div>
     </div>
   </div>
 
-  <div id="participaciones" style="padding:40px 20px;">
-    <h2 style="color:#A0522D; font-size:2.5em; text-align:center;">Participaciones</h2>
-    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; max-width:1200px; margin:0 auto; text-align:center;">
-
+  <div class="section fade-in">
+    <h2 class="section-title">Participaciones</h2>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; max-width:1200px; margin:0 auto; text-align:center;">
       <!-- Participación pasada -->
-      <div style="flex:1; min-width:250px; padding:20px; background-color:#FFFFFF; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-        <img src="img/bazarjulio.jpg" alt="Puesto en XIOS BAZAR" style="width:100%; object-fit:cover; border-radius:8px; margin-bottom:10px;">
-        <h3 style="color:#A0522D;">🛍️ Participación pasada</h3>
-        <p><strong>XIOS BAZAR</strong> – Club Deportivo Unión Española<br><strong>Julio 2025</strong></p>
-        <p>Fue una experiencia increíble donde pudimos compartir nuestras creaciones con personas maravillosas. Recibimos mucho cariño y apoyo, y nos motivó a seguir creciendo. 💕</p>
+      <div class="category-card" style="flex:1; min-width:300px;">
+        <img src="img/bazarjulio.jpg" alt="Puesto en XIOS BAZAR" style="width:100%; height: 250px; object-fit:cover; border-radius:var(--border-radius-md); margin-bottom:15px;">
+        <h3 style="color:var(--primary-color);">🛍️ Participación pasada</h3>
+        <p style="margin: 10px 0;"><strong>XIOS BAZAR</strong> – Club Deportivo Unión Española<br><strong>Julio 2025</strong></p>
+        <p style="color: var(--secondary-color);">Fue una experiencia increíble donde pudimos compartir nuestras creaciones con personas maravillosas. Recibimos mucho cariño y apoyo, y nos motivó a seguir creciendo. 💕</p>
       </div>
 
       <!-- Próxima participación -->
-      <div style="flex:1; min-width:250px; padding:20px; background-color:#fdf8f3; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-        <img src="img/bazarnoviembre.jpg" alt="Invitación a próximo bazar" style="width:100%; object-fit:cover; border-radius:8px; margin-bottom:10px;">
-        <h3 style="color:#A0522D;">📍 Próxima participación</h3>
-        <p>¡Ven a visitarnos! Tendremos nuevos productos, ofertas especiales y muchas sorpresas preparadas con mucho amor. 🎁</p>
+      <div class="category-card" style="flex:1; min-width:300px; background:var(--bg-warm);">
+        <img src="img/bazarnoviembre.jpg" alt="Invitación a próximo bazar" style="width:100%; height: 250px; object-fit:cover; border-radius:var(--border-radius-md); margin-bottom:15px;">
+        <h3 style="color:var(--primary-color);">📍 Próxima participación</h3>
+        <p style="margin: 10px 0; color: var(--secondary-color);">¡Ven a visitarnos! Tendremos nuevos productos, ofertas especiales y muchas sorpresas preparadas con mucho amor. 🎁</p>
       </div>
 
       <!-- Agradecimiento -->
-      <div style="flex:1; min-width:250px; padding:20px; background-color:#fdf8f3; border-radius:8px; box-shadow:0 2px 4px rgba(0,0,0,0.1);">
-        <img src="img/collage.png" alt="Agradecimiento al público" style="width:100%; object-fit:cover; border-radius:8px; margin-bottom:10px;">
-        <h3 style="color:#A0522D;">💛 Agradecimiento</h3>
-        <p>Gracias por cada visita, mensaje, compra y palabra de aliento. Cada encuentro en estos eventos nos llena de alegría y nos recuerda por qué amamos lo que hacemos. ¡Gracias por ser parte de nuestra historia!</p>
+      <div class="category-card" style="flex:1; min-width:300px;">
+        <img src="img/collage.png" alt="Agradecimiento al público" style="width:100%; height: 250px; object-fit:cover; border-radius:var(--border-radius-md); margin-bottom:15px;">
+        <h3 style="color:var(--primary-color);">💛 Agradecimiento</h3>
+        <p style="margin: 10px 0; color: var(--secondary-color);">Gracias por cada visita, mensaje, compra y palabra de aliento. Cada encuentro en estos eventos nos llena de alegría y nos recuerda por qué amamos lo que hacemos. ¡Gracias por ser parte de nuestra historia!</p>
       </div>
-
     </div>
   </div>
 
-
-
-  <footer style="background: url('img/hero.png') no-repeat center center/cover; padding: 20px; text-align: center; font-family: 'Poppins', sans-serif; position: relative; color: #A0522D;">
-      <div id="contacto" style="font-size: 1.5em;">
-          <h4 style="margin-bottom: 10px;">Contáctanos y síguenos en nuestras redes:</h4>
-          
-          <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-              <a href="https://www.instagram.com/plushiecrochetpty/" style="color: #A0522D; font-size: 20px; display: flex; align-items: center; text-decoration: none;">
-                  <img src="img/instagramlogo.webp" alt="Instagram" style="width: 24px; height: 34px; margin-right: 5px;"> plushiecrochetpty
-              </a>
-              
-              <a href="https://wa.me/50768691897" style="color: #A0522D; font-size: 20px; display: flex; align-items: center; text-decoration: none;">
-                  <img src="img/whatsapplogo.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-right: 5px;"> +507 6869-1897
-              </a>
-
-              <a href="https://www.facebook.com/plushiecrochetpty" style="color: #A0522D; font-size: 20px; display: flex; align-items: center; text-decoration: none;">
-                  <img src="img/facebook-logo.png" alt="Facebook" style="width: 24px; height: 24px; margin-right: 5px;"> Facebook
-              </a>
-          </div>
-          
-          <p style="font-size: 14px; margin-top: 20px;">
-              © 2025 Plushie Crochet. Todos los derechos reservados.
-          </p>
-      </div>
-  </footer>
-
+  <script>renderFooter();</script>
 </body>
 </html>

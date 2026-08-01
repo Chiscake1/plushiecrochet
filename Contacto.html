@@ -1,174 +1,319 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Plushie Crochet</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Plushie Crochet</title>
+  <link rel="icon" href="img/logonew.png" type="image/png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script src="components.js"></script>
 
-    <link rel="icon" href="img/logo 1.png" type="image/png">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
 
-    <style>
-      @media (max-width: 768px) {
-        #menuButton {
-          display: block !important;
-        }
+    .contact-box {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow-soft);
+    }
+    .contact-box h2 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+    }
+    .contact-box .box-desc {
+      color: var(--secondary-color);
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+    }
 
-        #navLinks {
-          width: 100%;
-          display: none;
-          padding-top: 10px;
-        }
+    /* Star rating */
+    .star-rating { display: flex; gap: 8px; margin-bottom: 20px; flex-direction: row-reverse; justify-content: flex-end; }
+    .star-rating input { display: none; }
+    .star-rating label {
+      font-size: 2.2rem;
+      cursor: pointer;
+      color: #ddd;
+      transition: color 0.2s;
+    }
+    .star-rating input:checked ~ label,
+    .star-rating label:hover,
+    .star-rating label:hover ~ label { color: #f5a623; }
 
-        #navLinks.show {
-          display: block;
-        }
+    /* Tipo sugerencia pills */
+    .tipo-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+    .tipo-pill {
+      padding: 8px 18px;
+      border-radius: 20px;
+      border: 2px solid var(--bg-warm);
+      background: var(--bg-warm);
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--secondary-color);
+      transition: all 0.25s;
+    }
+    .tipo-pill.selected, .tipo-pill:hover {
+      border-color: var(--primary-color);
+      background: var(--primary-color);
+      color: white;
+    }
 
-        #menu {
-          flex-direction: column !important;
-          gap: 10px;
-        }
+    .char-counter { font-size: 0.8rem; color: var(--secondary-color); text-align: right; margin-top: 4px; }
 
-        #menu a {
-          font-size: 20px;
-          padding: 10px 0;
-        }
-      }
-    </style>
+    .success-msg {
+      display: none;
+      background: #d4edda;
+      color: #155724;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin-top: 15px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .error-msg {
+      display: none;
+      background: #f8d7da;
+      color: #721c24;
+      border-radius: 12px;
+      padding: 15px 20px;
+      margin-top: 15px;
+      font-weight: 500;
+      text-align: center;
+    }
 
-    <style>
-        form {
-            width: 300px; 
-            padding: 16px; 
-            border-radius: 10px;
-            margin: auto; 
-            background-color: #ccc;
-        } 
-        
-        form label { 
-            width: 72px; 
-            font-weight: bold; 
-            display: inline-block; 
-        }
-
-        form input[type="text"],
-        form input[type="email"] { 
-            width: 180px; 
-            padding: 3px 10px;
-            border: 1px solid #f6f6f6;
-            border-radius: 3px;
-            background-color: #f6f6f6; 
-            margin: 8px 0; 
-            display: inline-block; 
-        }
-
-        form input[type="submit"] { 
-            width: 100%; 
-            padding: 8px 16px;
-            margin-top: 32px;
-            border: 1px solid #000; 
-            border-radius: 5px; 
-            display: block; 
-            color: #fff;
-            background-color: #000;
-        }
-
-        form input[type="submit"]:hover { 
-            cursor: pointer; 
-        }
-
-        textarea { 
-            width: 100%; 
-            height: 100px; 
-            border: 1px solid #f6f6f6;
-            border-radius: 3px; 
-            background-color: #f6f6f6; 
-            margin: 8px 0; 
-            resize: none;
-            display: block;
-        }
-    </style>
+    /* Contact info card */
+    .contact-info-card {
+      background: var(--bg-warm);
+      border-radius: 16px;
+      padding: 25px;
+      margin-top: 30px;
+    }
+    .contact-info-card h4 { margin-bottom: 15px; font-size: 1.1rem; }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(160,82,45,0.1);
+      color: var(--secondary-color);
+      font-size: 0.95rem;
+    }
+    .contact-link:last-child { border-bottom: none; }
+    .contact-link img { width: 22px; height: 22px; object-fit: contain; }
+  </style>
 </head>
-
 <body>
-    <header style="display: flex; align-items: center; padding: 15px 20px; background-color: #fffafc; flex-wrap: wrap;">
-      <img src="img/logo 1.png" alt="nuestro logo" style="width: 150px; margin-right: 20px;">
-      
-      <div class="textos" style="flex: 1;">
-        <h1 style="margin: 0; font-size: 28px; color: #A0522D; display: inline-block;">Plushie Crochet</h1>
-        <h1 style="margin: 0; font-size: 14px; color: #A0522D; display: inline-block; vertical-align: middle;">PTY</h1>
-        <p style="margin: 0; font-size: 22px; color: #A0522D;">Tejidos personalizados | Encuentra el regalo ideal</p>
-      </div>
+  <script>renderHeader();</script>
 
-      <!-- Botón hamburguesa -->
-      <button onclick="toggleMenu()" style="display: none; font-size: 28px; background: none; border: none; cursor: pointer; color: #A0522D;" id="menuButton">
-        ☰
-      </button>
+  <section class="section fade-in">
+    <h2 class="section-title">Contáctanos</h2>
+    <p class="section-subtitle">¿Tienes algo que decir? Nos encanta escucharte 💕</p>
 
-      <!-- Menú -->
-      <div id="navLinks" style="margin-left: auto; padding: 15px 20px; font-family: 'Poppins', sans-serif; font-size: 25px;">
-        <nav id="menu" style="display: flex; flex-direction: row; gap: 25px;">
-          <a href="index.html" style="color: #A0522D; text-decoration: none;">Inicio</a>
-          <a href="Entemporada.html" style="color: #A0522D; text-decoration: none;">En temporada</a>
-          <a href="productos.html" style="color: #A0522D; text-decoration: none;">Productos</a>
-          <a href="historia.html" style="color: #A0522D; text-decoration: none;">Historia</a>
-          <a href="contacto.html" style="color: #A0522D; text-decoration: none;">Contacto</a>
-        </nav>
-      </div>
-    </header>
+    <div class="contact-grid">
 
-    <script>
-      function toggleMenu() {
-        var nav = document.getElementById("navLinks");
-        nav.classList.toggle("show");
-      }
-    </script>
+      <!-- ── Formulario de Reseña ── -->
+      <div class="contact-box">
+        <h2>⭐ Deja tu Reseña</h2>
+        <p class="box-desc">¿Ya recibiste tu pedido? Cuéntanos tu experiencia. Tu opinión aparecerá en nuestra página de inicio.</p>
 
-    
-    <section style="padding: 40px; text-align: center;">
-        <h2 style="color: #A0522D;">Formulario de Contacto</h2>
-        <form action="#" target="" method="get" name="formDatosPersonales" style="background-color: #f7d4c8;">
-            <label for="nombre"> Nombre</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+        <form id="form-resena">
+          <div class="form-group">
+            <label for="res-nombre">Tu nombre</label>
+            <input type="text" id="res-nombre" name="nombre" placeholder="Ej: Sofía R." required maxlength="50">
+          </div>
 
-            <label for="apellidos">Apellidos</label>
-            <input type="text" name="apellidos" id="apellidos" placeholder="1r Apellido"/>
-            
-            <label for="email" />Email</label>
-            <input type="email" name="email" id="email" placeholder="email" required />
-            
-            <label for="asunto">Asunto</label>
-            <input type ="text" name="asunto" id="asunto" placeholder="titular de la consulta"/>
-            
-            <label for="mensaje">Mensaje</label>
-            <textarea name="mensaje" for="mensaje" placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
-            
-            <input style="background-color: #A0522D" type="submit" name="enviar" value="Enviar datos"/>
-        </form>
-    </section>
-
-    <footer style="background: url('img/hero.png') no-repeat center center/cover; padding: 20px; text-align: center; font-family: 'Poppins', sans-serif; position: relative; color: #A0522D;">
-            <div id="contacto" style="font-size: 1.5em;">
-                <h4 style="margin-bottom: 10px;">Contáctanos y síguenos en nuestras redes:</h4>
-                
-                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                    <a href="https://www.instagram.com/plushiecrochetpty/" style="color: #A0522D; font-size: 20px; display: flex; align-items: center; text-decoration: none;">
-                        <img src="img/instagramlogo.webp" alt="Instagram" style="width: 24px; height: 34px; margin-right: 5px;"> plushiecrochetpty
-                    </a>
-                    
-                    <a href="https://wa.me/50768691897" style="color: #A0522D; font-size: 20px; display: flex; align-items: center; text-decoration: none;">
-                        <img src="img/whatsapplogo.png" alt="WhatsApp" style="width: 24px; height: 24px; margin-right: 5px;"> +507 6869-1897
-                    </a>
-
-                    <a href="https://www.facebook.com/plushiecrochetpty" style="color: #A0522D; font-size: 20px; display: flex; align-items: center; text-decoration: none;">
-                        <img src="img/facebook-logo.png" alt="Facebook" style="width: 24px; height: 24px; margin-right: 5px;"> Facebook
-                    </a>
-                </div>
-                
-                <p style="font-size: 14px; margin-top: 20px;">
-                    © 2025 Plushie Crochet. Todos los derechos reservados.
-                </p>
+          <div class="form-group">
+            <label>Tu calificación</label>
+            <div class="star-rating" id="star-rating">
+              <input type="radio" id="s5" name="estrellas" value="5" required>
+              <label for="s5" title="5 estrellas">★</label>
+              <input type="radio" id="s4" name="estrellas" value="4">
+              <label for="s4" title="4 estrellas">★</label>
+              <input type="radio" id="s3" name="estrellas" value="3">
+              <label for="s3" title="3 estrellas">★</label>
+              <input type="radio" id="s2" name="estrellas" value="2">
+              <label for="s2" title="2 estrellas">★</label>
+              <input type="radio" id="s1" name="estrellas" value="1">
+              <label for="s1" title="1 estrella">★</label>
             </div>
-        </footer>
+          </div>
 
+          <div class="form-group">
+            <label for="res-comentario">Tu comentario</label>
+            <textarea id="res-comentario" name="comentario" placeholder="¿Qué te pareció el producto? ¿Cómo fue tu experiencia?" maxlength="300" required style="height:120px; resize:none;"></textarea>
+            <div class="char-counter"><span id="char-count">0</span>/300 caracteres</div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%; border:none; cursor:pointer; font-family:inherit; font-size:1rem;">
+            Enviar Reseña ✨
+          </button>
+          <div class="success-msg" id="resena-ok"></div>
+          <div class="error-msg" id="resena-err"></div>
+        </form>
+
+        <!-- Info de contacto directo -->
+        <div class="contact-info-card">
+          <h4>📱 También puedes escribirnos directamente:</h4>
+          <a href="https://wa.me/50768691897" class="contact-link" target="_blank" rel="noopener">
+            <img src="img/whatsapplogo.png" alt="WhatsApp"> +507 6869-1897
+          </a>
+          <a href="https://www.instagram.com/plushiecrochetpty/" class="contact-link" target="_blank" rel="noopener">
+            <img src="img/instagramlogo.webp" alt="Instagram"> @plushiecrochetpty
+          </a>
+          <a href="https://www.facebook.com/plushiecrochetpty" class="contact-link" target="_blank" rel="noopener">
+            <img src="img/facebook-logo.png" alt="Facebook"> plushiecrochetpty
+          </a>
+        </div>
+      </div>
+
+      <!-- ── Buzón de Sugerencias ── -->
+      <div class="contact-box">
+        <h2>📬 Buzón de Sugerencias</h2>
+        <p class="box-desc">Tus ideas nos ayudan a crecer. Escríbenos cualquier comentario, queja o sugerencia y nos llegará directamente al correo.</p>
+
+        <form id="form-sugerencia">
+          <div class="form-group">
+            <label for="sug-nombre">Tu nombre (opcional)</label>
+            <input type="text" id="sug-nombre" name="nombre_sug" placeholder="Puede ser anónimo" maxlength="50">
+          </div>
+
+          <div class="form-group">
+            <label>Tipo de mensaje</label>
+            <div class="tipo-pills" id="tipo-pills">
+              <div class="tipo-pill selected" data-value="Sugerencia">💡 Sugerencia</div>
+              <div class="tipo-pill" data-value="Felicitación">💐 Felicitación</div>
+              <div class="tipo-pill" data-value="Queja">😕 Queja</div>
+              <div class="tipo-pill" data-value="Pregunta">❓ Pregunta</div>
+            </div>
+            <input type="hidden" id="tipo-hidden" name="tipo" value="Sugerencia">
+          </div>
+
+          <div class="form-group">
+            <label for="sug-mensaje">Tu mensaje</label>
+            <textarea id="sug-mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje..." maxlength="600" required style="height:150px; resize:none;"></textarea>
+            <div class="char-counter"><span id="sug-char-count">0</span>/600 caracteres</div>
+          </div>
+
+          <button type="submit" class="btn-primary" style="width:100%; border:none; cursor:pointer; font-family:inherit; font-size:1rem;">
+            Enviar Sugerencia 📨
+          </button>
+          <div class="success-msg" id="sug-ok"></div>
+          <div class="error-msg" id="sug-err"></div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script>renderFooter();</script>
+
+  <script>
+    // ── Contador de caracteres reseña ──
+    document.getElementById('res-comentario').addEventListener('input', function () {
+      document.getElementById('char-count').textContent = this.value.length;
+    });
+
+    // ── Contador de caracteres sugerencia ──
+    document.getElementById('sug-mensaje').addEventListener('input', function () {
+      document.getElementById('sug-char-count').textContent = this.value.length;
+    });
+
+    // ── Pills de tipo ──
+    document.querySelectorAll('.tipo-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.tipo-pill').forEach(p => p.classList.remove('selected'));
+        pill.classList.add('selected');
+        document.getElementById('tipo-hidden').value = pill.dataset.value;
+      });
+    });
+
+    // ── Submit Reseña ──
+    document.getElementById('form-resena').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type=submit]');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+
+      fetch('api_publico.php', { method: 'POST', body: new FormData(this) })
+        .then(r => r.json())
+        .then(res => {
+          const ok = document.getElementById('resena-ok');
+          const err = document.getElementById('resena-err');
+          if (res.success) {
+            ok.textContent = res.message;
+            ok.style.display = 'block';
+            err.style.display = 'none';
+            this.reset();
+            document.getElementById('char-count').textContent = '0';
+          } else {
+            err.textContent = res.message;
+            err.style.display = 'block';
+            ok.style.display = 'none';
+          }
+        })
+        .catch(() => {
+          document.getElementById('resena-err').textContent = 'Error de conexión. Intenta de nuevo.';
+          document.getElementById('resena-err').style.display = 'block';
+        })
+        .finally(() => {
+          btn.textContent = 'Enviar Reseña ✨';
+          btn.disabled = false;
+        });
+    });
+
+    // ── Submit Sugerencia ──
+    document.getElementById('form-sugerencia').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('button[type=submit]');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+
+      const formData = new FormData(this);
+      formData.append('action', 'send_sugerencia');
+
+      fetch('api_publico.php', { method: 'POST', body: formData })
+        .then(r => r.json())
+        .then(res => {
+          const ok = document.getElementById('sug-ok');
+          const err = document.getElementById('sug-err');
+          if (res.success) {
+            ok.textContent = res.message;
+            ok.style.display = 'block';
+            err.style.display = 'none';
+            this.reset();
+            document.getElementById('sug-char-count').textContent = '0';
+            document.querySelectorAll('.tipo-pill').forEach(p => p.classList.remove('selected'));
+            document.querySelector('.tipo-pill').classList.add('selected');
+            document.getElementById('tipo-hidden').value = 'Sugerencia';
+          } else {
+            err.textContent = res.message;
+            err.style.display = 'block';
+            ok.style.display = 'none';
+          }
+        })
+        .catch(() => {
+          document.getElementById('sug-err').textContent = 'Error de conexión. Intenta de nuevo.';
+          document.getElementById('sug-err').style.display = 'block';
+        })
+        .finally(() => {
+          btn.textContent = 'Enviar Sugerencia 📨';
+          btn.disabled = false;
+        });
+    });
+  </script>
 </body>
-</html>
+</html>

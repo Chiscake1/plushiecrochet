@@ -19,7 +19,7 @@ const headerHTML = `
     <div id="navLinks" class="nav-links">
       <nav id="menu" class="nav-menu">
         <a href="/">Inicio</a>
-        <a href="/entemporada">En temporada</a>
+        <a href="/entemporada">Del momento</a>
         <a href="/productos">Productos</a>
         <a href="/historia">Historia</a>
         <a href="/contacto">Contacto</a>

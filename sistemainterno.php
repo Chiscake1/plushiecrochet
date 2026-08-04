@@ -568,20 +568,28 @@ header('X-Content-Type-Options: nosniff');
             </select>
           </div>
 
+          <div class="form-group">
+            <label>Agregar también a categorías Del Momento (Opcional):</label>
+            <input type="hidden" name="seasons_submitted" value="1">
+            <div id="add-product-seasons-container" style="background:#fafafa; padding:10px; border-radius:8px; border:1px solid #eee; display:flex; flex-direction:column; gap:5px;">
+              <!-- checkboxes will be populated here -->
+            </div>
+          </div>
+
           <button type="submit" class="btn">Publicar Producto</button>
         </form>
       </div>
 
       <!-- Card 3: Crear Temporada -->
       <div class="card">
-        <h3>🌸 Crear Nueva Temporada</h3>
+        <h3>🌸 Crear Nueva Categoría del Momento</h3>
         <p style="margin-bottom: 20px; color: var(--text-light); font-size: 0.95rem;">
-          Crea una nueva categoría de temporada con su foto de perfil. Luego podrás agregarle productos desde el catálogo.
+          Crea una nueva categoría "del momento" con su foto de perfil. Luego podrás agregarle productos desde el catálogo.
         </p>
         <form id="create-season-form" enctype="multipart/form-data">
 
           <div class="form-group">
-            <label>Foto de Perfil de la Temporada</label>
+            <label>Foto de Perfil de la Categoría</label>
             <div class="file-upload-wrapper" id="season-drop-area">
               <div class="file-upload-icon" id="season-upload-icon">🖼️</div>
               <span id="season-file-name">Haz clic o arrastra una imagen</span>
@@ -802,6 +810,13 @@ header('X-Content-Type-Options: nosniff');
                 <option value="">-- Mantener en la sección actual --</option>
               </select>
             </div>
+            <div class="form-group" id="edit-season-checkboxes">
+              <label>Presente en categorías Del Momento:</label>
+              <input type="hidden" name="seasons_submitted" value="1">
+              <div id="edit-product-seasons-container" style="background:#fafafa; padding:10px; border-radius:8px; border:1px solid #eee; display:flex; flex-direction:column; gap:5px;">
+                <!-- checkboxes here -->
+              </div>
+            </div>
             <button type="submit" class="btn">Guardar Cambios</button>
           </form>
         </div>
@@ -882,7 +897,7 @@ header('X-Content-Type-Options: nosniff');
 
     // Load Data
     document.addEventListener("DOMContentLoaded", () => {
-      fetch('productos.json')
+      fetch('productos.json?v=' + new Date().getTime())
         .then(res => res.json())
         .then(data => {
           window._seasonData = data;
@@ -896,11 +911,13 @@ header('X-Content-Type-Options: nosniff');
           data.categorias_productos.forEach(cat => {
             catSelect.innerHTML += `<option value="productos|${cat.id}">[General] ${cat.titulo}</option>`;
           });
-          catSelect.innerHTML += '</optgroup><optgroup label="Sección En Temporada">';
+          catSelect.innerHTML += '</optgroup><optgroup label="Sección Del Momento">';
           data.categorias_entemporada.forEach(cat => {
-            catSelect.innerHTML += `<option value="entemporada|${cat.id}">[Temporada] ${cat.titulo}</option>`;
+            catSelect.innerHTML += `<option value="entemporada|${cat.id}">[Del Momento] ${cat.titulo}</option>`;
           });
           catSelect.innerHTML += '</optgroup>';
+
+          populateAddSeasons(data);
 
           // Populate seasons visibility toggles
           populateInicioSeasons(data);
@@ -985,10 +1002,8 @@ header('X-Content-Type-Options: nosniff');
       const rows = allRows.map(row => {
         const { prefix, catId, catTitulo, idx, prod } = row;
         const badgeClass = prefix === 'productos' ? 'badge-productos' : 'badge-temporada';
-        const badgeLabel = prefix === 'productos' ? 'General' : 'Temporada';
-        const seasonBtn  = prefix === 'productos'
-          ? `<button class="btn-sm btn-season" onclick="openCopyToSeasonModal('${catId}',${idx})">➕ Temp</button>`
-          : '';
+        const badgeLabel = prefix === 'productos' ? 'General' : 'Del Momento';
+        const deleteBtn = `<button class="btn-sm" style="background:#e74c3c; color:white; margin-left:5px;" onclick="deleteProduct('${prefix}|${catId}',${idx})">🗑️ Eliminar</button>`;
         return [
           `<img class="prod-thumb" src="${prod.imagen}" alt="${prod.nombre}">`,
           prod.nombre,
@@ -997,7 +1012,7 @@ header('X-Content-Type-Options: nosniff');
           `<span class="cat-badge ${badgeClass}">${badgeLabel}</span>`,
           `<div class="action-btns">
             <button class="btn-sm btn-edit" onclick="openEditModal('${prefix}|${catId}',${idx})">✏️ Editar</button>
-            ${seasonBtn}
+            ${deleteBtn}
           </div>`
         ];
       });
@@ -1058,7 +1073,7 @@ header('X-Content-Type-Options: nosniff');
       document.getElementById('edit-preview-image').src = prod.imagen;
       document.getElementById('edit-product-image').value = '';
 
-      // Rellenar selector de sección destino
+      // Rellenar selector de sección destino (Solo Generales)
       const newCatSel = document.getElementById('edit-product-new-cat');
       newCatSel.innerHTML = '<option value="">-- Mantener en la sección actual --</option>';
       if (globalProductsData) {
@@ -1067,12 +1082,25 @@ header('X-Content-Type-Options: nosniff');
             newCatSel.innerHTML += `<option value="productos|${c.id}">[General] ${c.titulo}</option>`;
           }
         });
-        globalProductsData.categorias_entemporada.forEach(c => {
-          if (!(prefix === 'entemporada' && c.id === catId)) {
-            newCatSel.innerHTML += `<option value="entemporada|${c.id}">[Temporada] ${c.titulo}</option>`;
-          }
+      }
+
+      // Rellenar checkboxes de temporadas
+      const seasonsDiv = document.getElementById('edit-product-seasons-container');
+      seasonsDiv.innerHTML = '';
+      if (globalProductsData && globalProductsData.categorias_entemporada) {
+        globalProductsData.categorias_entemporada.forEach(season => {
+          const exists = season.productos.some(p => p.nombre === prod.nombre && p.imagen === prod.imagen);
+          seasonsDiv.innerHTML += `
+            <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+              <input type="checkbox" name="seasons[]" value="${season.id}" ${exists ? 'checked' : ''} style="width:auto; margin:0;">
+              <span style="font-size:0.95rem;">${season.titulo}</span>
+            </label>
+          `;
         });
       }
+      
+      // Ocultar opciones si editamos desde una temporada
+      document.getElementById('edit-season-checkboxes').style.display = prefix === 'entemporada' ? 'none' : 'block';
 
       // Mostrar panel inline
       document.getElementById('edit-panel').style.display = 'block';
@@ -1161,6 +1189,41 @@ header('X-Content-Type-Options: nosniff');
       });
     });
 
+    function deleteProduct(categoriaRaw, productIdx) {
+      if (!confirm('¿Estás seguro de que deseas eliminar este producto?')) return;
+      const fd = new FormData();
+      fd.append('action', 'delete_product');
+      fd.append('categoria', categoriaRaw);
+      fd.append('product_idx', productIdx);
+
+      fetchApi(fd)
+        .then(res => res.json())
+        .then(res => {
+          showMessage(res.success, res.message);
+          if (res.success) {
+            setTimeout(() => window.location.reload(), 1500);
+          }
+        })
+        .catch(err => showMessage(false, 'Error al eliminar producto.'));
+    }
+
+    function populateAddSeasons(data) {
+      const addSeasonsDiv = document.getElementById('add-product-seasons-container');
+      if (addSeasonsDiv) {
+        addSeasonsDiv.innerHTML = '';
+        if (data.categorias_entemporada) {
+          data.categorias_entemporada.forEach(season => {
+            addSeasonsDiv.innerHTML += `
+              <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+                <input type="checkbox" name="seasons[]" value="${season.id}" style="width:auto; margin:0;">
+                <span style="font-size:0.95rem;">${season.titulo}</span>
+              </label>
+            `;
+          });
+        }
+      }
+    }
+
     function populateDeleteSelect(data) {
       const deleteSelect = document.getElementById('delete-season-select');
       const editSelect = document.getElementById('edit-season-select');
@@ -1200,6 +1263,7 @@ header('X-Content-Type-Options: nosniff');
             previewImage.style.display = 'none';
             fileNameSpan.style.display = 'block';
             document.querySelector('.file-upload-icon').style.display = 'block';
+            setTimeout(() => window.location.reload(), 1500);
           }
         })
         .catch(err => showMessage(false, "Error de red: Asegúrate de que PHP está corriendo."));
@@ -1279,7 +1343,7 @@ header('X-Content-Type-Options: nosniff');
             document.getElementById('season-preview').style.display = 'none';
             document.getElementById('season-file-name').style.display = 'inline';
             document.getElementById('season-upload-icon').style.display = 'block';
-            fetch('productos.json').then(r => r.json()).then(data => {
+            fetch('productos.json?v=' + new Date().getTime()).then(r => r.json()).then(data => {
               window._seasonData = data;
               populateDeleteSelect(data);
               populateInicioSeasons(data);
@@ -1306,7 +1370,7 @@ header('X-Content-Type-Options: nosniff');
           showMessage(res.success, res.message);
           if (res.success) {
             document.getElementById('season-preview-card').style.display = 'none';
-            fetch('productos.json').then(r => r.json()).then(data => {
+            fetch('productos.json?v=' + new Date().getTime()).then(r => r.json()).then(data => {
               window._seasonData = data;
               populateDeleteSelect(data);
               populateInicioSeasons(data);
@@ -1330,7 +1394,7 @@ header('X-Content-Type-Options: nosniff');
         .then(res => {
           showMessage(res.success, res.message);
           if (res.success) {
-            fetch('productos.json').then(r => r.json()).then(data => {
+            fetch('productos.json?v=' + new Date().getTime()).then(r => r.json()).then(data => {
               window._seasonData = data;
               populateDeleteSelect(data);
               populateInicioSeasons(data);
@@ -1387,7 +1451,7 @@ header('X-Content-Type-Options: nosniff');
           showMessage(res.success, res.message);
           if (res.success) {
             this.reset();
-            fetch('productos.json').then(r => r.json()).then(data => {
+            fetch('productos.json?v=' + new Date().getTime()).then(r => r.json()).then(data => {
               window._seasonData = data;
               populateCategorySelects(data);
               // Refrescar el select de categoría en agregar producto
@@ -1419,7 +1483,7 @@ header('X-Content-Type-Options: nosniff');
         .then(res => {
           showMessage(res.success, res.message);
           if (res.success) {
-            fetch('productos.json').then(r => r.json()).then(data => {
+            fetch('productos.json?v=' + new Date().getTime()).then(r => r.json()).then(data => {
               window._seasonData = data;
               populateCategorySelects(data);
               renderCatalog(data);
@@ -1443,7 +1507,7 @@ header('X-Content-Type-Options: nosniff');
         .then(res => {
           showMessage(res.success, res.message);
           if (res.success) {
-            fetch('productos.json').then(r => r.json()).then(data => {
+            fetch('productos.json?v=' + new Date().getTime()).then(r => r.json()).then(data => {
               window._seasonData = data;
               populateCategorySelects(data);
               // Refrescar el select de categoría en agregar producto

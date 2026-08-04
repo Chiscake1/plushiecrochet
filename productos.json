@@ -7,86 +7,44 @@
             "subtitulo": "(Tiernos, suaves y hechos con amor)",
             "productos": [
                 {
-                    "imagen": "img\/peluches\/gato2.jpg",
+                    "imagen": "img/peluches/gato2.jpg",
                     "alt": "Gato 2",
                     "nombre": "Gato con collar",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/peluches\/flufly.jpg",
+                    "imagen": "img/peluches/flufly.jpg",
                     "alt": "Flufly",
                     "nombre": "Fluffy Pancake",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/peluches\/aguila.jpg",
+                    "imagen": "img/peluches/aguila.jpg",
                     "alt": "Águila",
                     "nombre": "Águila",
                     "descripcion": "...",
                     "precio": 20
                 },
                 {
-                    "imagen": "img\/peluches\/yoda.jpg",
-                    "alt": "Yoda",
-                    "nombre": "Yoda",
-                    "descripcion": "...",
-                    "precio": 20
-                },
-                {
-                    "imagen": "img\/peluches\/conejopintor.jpg",
+                    "imagen": "img/peluches/conejopintor.jpg",
                     "alt": "Conejo Pintor",
                     "nombre": "Conejo Pintor",
                     "descripcion": "...",
                     "precio": 23
                 },
                 {
-                    "imagen": "img\/peluches\/ponyo.jpg",
-                    "alt": "Ponyo",
-                    "nombre": "Ponyo",
-                    "descripcion": "...",
-                    "precio": 24
-                },
-                {
-                    "imagen": "img\/peluches\/gato.jpg",
+                    "imagen": "img/peluches/gato.jpg",
                     "alt": "Gato",
                     "nombre": "Gato",
                     "descripcion": "...",
                     "precio": 25
                 },
                 {
-                    "imagen": "img\/peluches\/snoopypiloto.jpg",
-                    "alt": "Snoopy Piloto",
-                    "nombre": "Snoopy Piloto",
-                    "descripcion": "...",
-                    "precio": 28
-                },
-                {
-                    "imagen": "img\/peluches\/dannylux.jpg",
-                    "alt": "Dannylux",
-                    "nombre": "Dannylux",
-                    "descripcion": "...",
-                    "precio": 30
-                },
-                {
-                    "imagen": "img\/peluches\/stitch.jpg",
-                    "alt": "Stitch",
-                    "nombre": "Stitch",
-                    "descripcion": "...",
-                    "precio": 34
-                },
-                {
-                    "imagen": "img\/peluches\/ballenas.jpg",
+                    "imagen": "img/peluches/ballenas.jpg",
                     "alt": "Ballenas",
                     "nombre": "Pareja de ballenas",
-                    "descripcion": "...",
-                    "precio": 35
-                },
-                {
-                    "imagen": "img\/peluches\/snoopytulipan.jpg",
-                    "alt": "Snoopy Tulipán",
-                    "nombre": "Snoopy con tulipán",
                     "descripcion": "...",
                     "precio": 35
                 }
@@ -98,32 +56,67 @@
             "subtitulo": "",
             "productos": [
                 {
-                    "imagen": "img\/peluches\/conejo.jpg",
+                    "imagen": "img/peluches/conejo.jpg",
                     "alt": "Conejo",
                     "nombre": "La conejita",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 30
                 },
                 {
-                    "imagen": "img\/peluches\/conejo2.jpeg",
+                    "imagen": "img/peluches/conejo2.jpeg",
                     "alt": "Conejo",
                     "nombre": "La conejita con vestido",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 35
                 },
                 {
-                    "imagen": "img\/peluches\/conejo3.jpeg",
+                    "imagen": "img/peluches/conejo3.jpeg",
                     "alt": "Conejo",
                     "nombre": "El conejito",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 35
                 },
                 {
-                    "imagen": "img\/peluches\/abeja.jpg",
+                    "imagen": "img/peluches/abeja.jpg",
                     "alt": "Abeja",
                     "nombre": "Abeja",
                     "descripcion": "Altura: 12 pulg",
                     "precio": 50
+                },
+                {
+                    "imagen": "img/uploads/1785875812_bc38e38c783ef806.jpeg",
+                    "alt": "Osito",
+                    "nombre": "Osito",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/uploads/1785875834_be4e1e1abd22c5a2.jpeg",
+                    "alt": "La conejita",
+                    "nombre": "La conejita",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/uploads/1785875938_9ae3d73fb7d81aed.jpeg",
+                    "alt": "La coneja",
+                    "nombre": "La coneja",
+                    "descripcion": "...",
+                    "precio": 42
+                },
+                {
+                    "imagen": "img/uploads/1785875964_4f6e98b84f226b50.jpeg",
+                    "alt": "Abeja",
+                    "nombre": "Abeja",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/uploads/1785876068_ff07b1f856404e90.jpeg",
+                    "alt": "Oveja",
+                    "nombre": "Oveja",
+                    "descripcion": "...",
+                    "precio": 37
                 }
             ]
         },
@@ -133,32 +126,32 @@
             "subtitulo": "",
             "productos": [
                 {
-                    "imagen": "img\/peluches\/osorojo.jpg",
+                    "imagen": "img/peluches/osorojo.jpg",
                     "alt": "Oso Rojo",
                     "nombre": "Oso con corazón",
                     "descripcion": "Altura: 13 pulg",
                     "precio": 43
                 },
                 {
-                    "imagen": "img\/peluches\/gojogato.jpg",
-                    "alt": "Gojo Gato",
-                    "nombre": "Gojo Gato",
-                    "descripcion": "Altura: 13 pulg",
-                    "precio": 43
-                },
-                {
-                    "imagen": "img\/peluches\/casahongo.jfif",
-                    "alt": "Casa hongo",
+                    "imagen": "img/peluches/casahongo.jfif",
+                    "alt": "Casita hongo",
                     "nombre": "Casita hongo",
                     "descripcion": "Altura: 13 pulg",
                     "precio": 45
                 },
                 {
-                    "imagen": "img\/peluches\/mantaraya.jpg",
+                    "imagen": "img/peluches/mantaraya.jpg",
                     "alt": "Mantarraya",
                     "nombre": "Almohada de Mantarraya",
                     "descripcion": "Altura: 25 pulg",
                     "precio": 99
+                },
+                {
+                    "imagen": "img/uploads/1785875855_5990770a4de9d366.jpeg",
+                    "alt": "Axolote",
+                    "nombre": "Axolote",
+                    "descripcion": "...",
+                    "precio": 35
                 }
             ]
         },
@@ -168,56 +161,56 @@
             "subtitulo": "(Pequeños, adorables y perfectos para acompañarte)",
             "productos": [
                 {
-                    "imagen": "img\/llaveros\/ballena.jpg",
+                    "imagen": "img/llaveros/ballena.jpg",
                     "alt": "Ballena",
                     "nombre": "Ballena",
                     "descripcion": "...",
                     "precio": 7
                 },
                 {
-                    "imagen": "img\/llaveros\/tulipan.jpg",
+                    "imagen": "img/llaveros/tulipan.jpg",
                     "alt": "Tulipán",
                     "nombre": "Tulipán",
                     "descripcion": "...",
                     "precio": 7
                 },
                 {
-                    "imagen": "img\/llaveros\/abeja.jpg",
+                    "imagen": "img/llaveros/abeja.jpg",
                     "alt": "Abeja",
                     "nombre": "Abeja",
                     "descripcion": "...",
                     "precio": 12
                 },
                 {
-                    "imagen": "img\/llaveros\/tiburon.jpg",
+                    "imagen": "img/llaveros/tiburon.jpg",
                     "alt": "Tiburón",
                     "nombre": "Tiburón",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/llaveros\/medusa.jpg",
+                    "imagen": "img/llaveros/medusa.jpg",
                     "alt": "Medusa",
                     "nombre": "Medusa",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/llaveros\/totoro.jpg",
+                    "imagen": "img/llaveros/totoro.jpg",
                     "alt": "Totoro",
                     "nombre": "Totoro",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/llaveros\/cerveza.jpg",
+                    "imagen": "img/llaveros/cerveza.jpg",
                     "alt": "Cerveza",
                     "nombre": "Cerveza",
                     "descripcion": "...",
                     "precio": 17
                 },
                 {
-                    "imagen": "img\/llaveros\/tortuga.jpg",
+                    "imagen": "img/llaveros/tortuga.jpg",
                     "alt": "Tortuga",
                     "nombre": "Tortuga",
                     "descripcion": "...",
@@ -231,21 +224,21 @@
             "subtitulo": "",
             "productos": [
                 {
-                    "imagen": "img\/llaveros\/ositos.jpg",
+                    "imagen": "img/llaveros/ositos.jpg",
                     "alt": "Ositos",
                     "nombre": "Ositos",
                     "descripcion": "...",
                     "precio": 17
                 },
                 {
-                    "imagen": "img\/llaveros\/animales.jpg",
+                    "imagen": "img/llaveros/animales.jpg",
                     "alt": "Animales",
                     "nombre": "Animales",
                     "descripcion": "...",
                     "precio": 20
                 },
                 {
-                    "imagen": "img\/llaveros\/chimuelos.jpg",
+                    "imagen": "img/llaveros/chimuelos.jpg",
                     "alt": "Chimuelos",
                     "nombre": "Chimuelos",
                     "descripcion": "...",
@@ -259,63 +252,63 @@
             "subtitulo": "(Divertidos y llenos de color)",
             "productos": [
                 {
-                    "imagen": "img\/columpios\/rosa.jpg",
+                    "imagen": "img/columpios/rosa.jpg",
                     "alt": "Rosa",
                     "nombre": "Rosa",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/columpios\/fantasma.jpg",
+                    "imagen": "img/columpios/fantasma.jpg",
                     "alt": "Fantasma",
                     "nombre": "Fantasma",
                     "descripcion": "...",
                     "precio": 16
                 },
                 {
-                    "imagen": "img\/columpios\/pollo.jpg",
+                    "imagen": "img/columpios/pollo.jpg",
                     "alt": "Pollo",
                     "nombre": "Pollo",
                     "descripcion": "...",
                     "precio": 16
                 },
                 {
-                    "imagen": "img\/columpios\/mariposa.jpeg",
+                    "imagen": "img/columpios/mariposa.jpeg",
                     "alt": "mariposa",
                     "nombre": "Mariposa",
                     "descripcion": "...",
                     "precio": 24
                 },
                 {
-                    "imagen": "img\/columpios\/spiderman.webp",
+                    "imagen": "img/columpios/spiderman.webp",
                     "alt": "Spiderman",
                     "nombre": "Spiderman",
                     "descripcion": "...",
                     "precio": 24
                 },
                 {
-                    "imagen": "img\/columpios\/Milesmorales.jpg",
-                    "alt": "Miles Morales",
+                    "imagen": "img/columpios/Milesmorales.jpg",
+                    "alt": "Spiderman Miles Morales",
                     "nombre": "Spiderman Miles Morales",
                     "descripcion": "...",
                     "precio": 24
                 },
                 {
-                    "imagen": "img\/columpios\/deadpool.jpeg",
+                    "imagen": "img/columpios/deadpool.jpeg",
                     "alt": "Deadpool",
                     "nombre": "Deadpool",
                     "descripcion": "...",
                     "precio": 24
                 },
                 {
-                    "imagen": "img\/columpios\/gallo.jpg",
+                    "imagen": "img/columpios/gallo.jpg",
                     "alt": "Gallo",
                     "nombre": "Gallo",
                     "descripcion": "...",
                     "precio": 26
                 },
                 {
-                    "imagen": "img\/columpios\/snoopy.jpg",
+                    "imagen": "img/columpios/snoopy.jpg",
                     "alt": "Snoopy",
                     "nombre": "Snoopy",
                     "descripcion": "...",
@@ -329,42 +322,42 @@
             "subtitulo": "",
             "productos": [
                 {
-                    "imagen": "img\/concha.jpg",
+                    "imagen": "img/concha.jpg",
                     "alt": "Pendientes de caracola",
                     "nombre": "Pendientes de caracola",
-                    "descripcion": "c\/u",
+                    "descripcion": "c/u",
                     "precio": 5
                 },
                 {
-                    "imagen": "img\/circular.jpg",
+                    "imagen": "img/circular.jpg",
                     "alt": "Pendientes en círculo",
                     "nombre": "Pendientes en círculo",
                     "descripcion": "...",
                     "precio": 5
                 },
                 {
-                    "imagen": "img\/pollera.jpg",
+                    "imagen": "img/pollera.jpg",
                     "alt": "Pendientes de pollera",
                     "nombre": "Pendientes de pollera",
                     "descripcion": "...",
                     "precio": 6
                 },
                 {
-                    "imagen": "img\/yinyang.jpg",
-                    "alt": "Pendientes con doble círculo",
+                    "imagen": "img/yinyang.jpg",
+                    "alt": "Pendientes con dos aros",
                     "nombre": "Pendientes con dos aros",
                     "descripcion": "...",
                     "precio": 7
                 },
                 {
-                    "imagen": "img\/perla.jpg",
+                    "imagen": "img/perla.jpg",
                     "alt": "Pendientes con perla y estilo",
                     "nombre": "Pendientes con perla y estilo",
                     "descripcion": "...",
                     "precio": 8
                 },
                 {
-                    "imagen": "img\/accesorios.jpg",
+                    "imagen": "img/accesorios.jpg",
                     "alt": "Pendientes de rosa",
                     "nombre": "Pendientes de rosa",
                     "descripcion": "...",
@@ -378,42 +371,42 @@
             "subtitulo": "",
             "productos": [
                 {
-                    "imagen": "img\/flores\/florcorazon.jpg",
+                    "imagen": "img/flores/florcorazon.jpg",
                     "alt": "flor corazón",
                     "nombre": "Tulipan con Corazón",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/flores\/tulipansolo.jpg",
+                    "imagen": "img/flores/tulipansolo.jpg",
                     "alt": "tulipán solo",
                     "nombre": "Tulipán",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/flores\/girasol.jpg",
+                    "imagen": "img/flores/girasol.jpg",
                     "alt": "girasol",
                     "nombre": "Girasol",
                     "descripcion": "...",
                     "precio": 25
                 },
                 {
-                    "imagen": "img\/flores\/tulipaneslila.jpg",
+                    "imagen": "img/flores/tulipaneslila.jpg",
                     "alt": "tulipanes lila",
                     "nombre": "Ramo de tulipanes lila",
                     "descripcion": "...",
                     "precio": 28
                 },
                 {
-                    "imagen": "img\/flores\/tulipanesblanco.jpg",
+                    "imagen": "img/flores/tulipanesblanco.jpg",
                     "alt": "tulipanes blanco",
                     "nombre": "Ramo de tulipanes Blanco",
                     "descripcion": "...",
                     "precio": 28
                 },
                 {
-                    "imagen": "img\/flores\/rosa.jpg",
+                    "imagen": "img/flores/rosa.jpg",
                     "alt": "rosa",
                     "nombre": "Rosa",
                     "descripcion": "...",
@@ -427,46 +420,116 @@
             "subtitulo": "",
             "productos": [
                 {
-                    "imagen": "img\/Curiosidades\/marcapagina.jpg",
+                    "imagen": "img/Curiosidades/marcapagina.jpg",
                     "alt": "marca pagina",
                     "nombre": "Marca Página",
-                    "descripcion": "c\/u",
+                    "descripcion": "c/u",
                     "precio": 5
                 },
                 {
-                    "imagen": "img\/Curiosidades\/separador.jfif",
+                    "imagen": "img/Curiosidades/separador.jfif",
                     "alt": "marca pagina",
                     "nombre": "Marca Página",
-                    "descripcion": "c\/u",
+                    "descripcion": "c/u",
                     "precio": 14
                 },
                 {
-                    "imagen": "img\/posavasos\/flornaranja.jpg",
+                    "imagen": "img/posavasos/flornaranja.jpg",
                     "alt": "posavasosflnaranja",
                     "nombre": "Posavasos Flor Naranja",
-                    "descripcion": "c\/u",
+                    "descripcion": "c/u",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/posavasos\/floramarilla.jpg",
+                    "imagen": "img/posavasos/floramarilla.jpg",
                     "alt": "posavasosflamarilla",
                     "nombre": "Posavasos Flor Amarilla",
                     "descripcion": "set de 4",
                     "precio": 20
                 },
                 {
-                    "imagen": "img\/posavasos\/rosa.jpg",
+                    "imagen": "img/posavasos/rosa.jpg",
                     "alt": "posavasosrosa",
                     "nombre": "Posavasos",
                     "descripcion": "Set de 4",
                     "precio": 20
                 },
                 {
-                    "imagen": "img\/Curiosidades\/posalentes.jpg",
+                    "imagen": "img/Curiosidades/posalentes.jpg",
                     "alt": "posa lentes",
                     "nombre": "Posa Lentes",
-                    "descripcion": "c\/u",
+                    "descripcion": "c/u",
                     "precio": 23
+                }
+            ]
+        },
+        {
+            "id": "_personajes",
+            "titulo": "🎭 Personajes",
+            "subtitulo": "",
+            "productos": [
+                {
+                    "imagen": "img/peluches/dannylux.jpg",
+                    "alt": "Dannylux",
+                    "nombre": "Dannylux",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/peluches/gojogato.jpg",
+                    "alt": "Gojo Gato",
+                    "nombre": "Gojo Gato",
+                    "descripcion": "Altura: 13 pulg",
+                    "precio": 43
+                },
+                {
+                    "imagen": "img/peluches/ponyo.jpg",
+                    "alt": "Ponyo",
+                    "nombre": "Ponyo",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img/peluches/stitch.jpg",
+                    "alt": "Stitch",
+                    "nombre": "Stitch",
+                    "descripcion": "...",
+                    "precio": 34
+                },
+                {
+                    "imagen": "img/peluches/snoopytulipan.jpg",
+                    "alt": "Snoopy con tulipán",
+                    "nombre": "Snoopy con tulipán",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/peluches/snoopypiloto.jpg",
+                    "alt": "Snoopy Piloto",
+                    "nombre": "Snoopy Piloto",
+                    "descripcion": "...",
+                    "precio": 28
+                },
+                {
+                    "imagen": "img/peluches/yoda.jpg",
+                    "alt": "Yoda",
+                    "nombre": "Yoda",
+                    "descripcion": "...",
+                    "precio": 20
+                },
+                {
+                    "imagen": "img/uploads/1785875764_de7c3e72a84bf623.jpeg",
+                    "alt": "Baymax",
+                    "nombre": "Baymax",
+                    "descripcion": "...",
+                    "precio": 30
+                },
+                {
+                    "imagen": "img/uploads/1785875891_7d515ac283d87954.jpeg",
+                    "alt": "Mafalda",
+                    "nombre": "Mafalda",
+                    "descripcion": "...",
+                    "precio": 45
                 }
             ]
         }
@@ -477,170 +540,342 @@
             "titulo": "Día de las madres",
             "productos": [
                 {
-                    "imagen": "img\/concha.jpg",
+                    "imagen": "img/concha.jpg",
                     "alt": "pendientesconcha",
                     "nombre": "Pendientes de concha",
                     "descripcion": "...",
                     "precio": 5
                 },
                 {
-                    "imagen": "img\/accesorios\/pollera.jpg",
+                    "imagen": "img/accesorios/pollera.jpg",
                     "alt": "pendientes pollera",
                     "nombre": "Pendientes de pollera",
                     "descripcion": "...",
                     "precio": 6
                 },
                 {
-                    "imagen": "img\/yinyang.jpg",
+                    "imagen": "img/yinyang.jpg",
                     "alt": "pendientesyinyang",
                     "nombre": "Pendientes de doble aro",
                     "descripcion": "...",
                     "precio": 7
                 },
                 {
-                    "imagen": "img\/accesorios\/rosaamarillo.jpg",
+                    "imagen": "img/accesorios/rosaamarillo.jpg",
                     "alt": "Rosamarilla",
                     "nombre": "Pendientes de rosa",
                     "descripcion": "...",
                     "precio": 9
                 },
                 {
-                    "imagen": "img\/Curiosidades\/separador.jfif",
+                    "imagen": "img/Curiosidades/separador.jfif",
                     "alt": "separador para mamá",
                     "nombre": "Separador de libro",
                     "descripcion": "...",
                     "precio": 14
                 },
                 {
-                    "imagen": "img\/flores\/tulipansolo.jpg",
+                    "imagen": "img/flores/tulipansolo.jpg",
                     "alt": "tulipansolo",
                     "nombre": "Tulipán",
                     "descripcion": "...",
                     "precio": 15
                 },
                 {
-                    "imagen": "img\/Curiosidades\/posalentes.jpg",
+                    "imagen": "img/Curiosidades/posalentes.jpg",
                     "alt": "posalentes",
                     "nombre": "Portalentes para mamá",
                     "descripcion": "...",
                     "precio": 23
                 },
                 {
-                    "imagen": "img\/flores\/girasol.jpg",
+                    "imagen": "img/flores/girasol.jpg",
                     "alt": "snoopy calabaza",
                     "nombre": "Girasol",
                     "descripcion": "...",
                     "precio": 25
                 },
                 {
-                    "imagen": "img\/flores\/rosa.jpg",
+                    "imagen": "img/flores/rosa.jpg",
                     "alt": "rosa",
                     "nombre": "Rosa",
                     "descripcion": "...",
                     "precio": 39
                 }
-            ]
+            ],
+            "mostrar_en_inicio": false
         },
         {
             "id": "navidad",
             "titulo": "Navideños",
             "productos": [
                 {
-                    "imagen": "img\/peluches\/tortuga.jpeg",
+                    "imagen": "img/peluches/tortuga.jpeg",
                     "alt": "tortuganavidad",
                     "nombre": "Tortuda navideña",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 29
                 },
                 {
-                    "imagen": "img\/peluches\/muñecogengibre.jpeg",
+                    "imagen": "img/peluches/muñecogengibre.jpeg",
                     "alt": "muñecogengibre",
                     "nombre": "Muñeco de gengibre",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 35
                 },
                 {
-                    "imagen": "img\/navidad.jpg",
+                    "imagen": "img/navidad.jpg",
                     "alt": "Muñeconieve",
                     "nombre": "Muñeco de nieve",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 35
                 },
                 {
-                    "imagen": "img\/grinch.jpg",
+                    "imagen": "img/grinch.jpg",
                     "alt": "Grinch",
                     "nombre": "Grinch",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 35
                 },
                 {
-                    "imagen": "img\/peluches\/arbolito.jpeg",
+                    "imagen": "img/peluches/arbolito.jpeg",
                     "alt": "arbolitonavidad",
                     "nombre": "Arbolito de navidad",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 35
                 },
                 {
-                    "imagen": "img\/peluches\/snowman4.jpeg",
+                    "imagen": "img/peluches/snowman4.jpeg",
                     "alt": "muñeconieve2",
                     "nombre": "Muñeco de nieve",
                     "descripcion": "Altura: 9 pulg",
                     "precio": 35
                 },
                 {
-                    "imagen": "img\/gengibre.jpg",
-                    "alt": "Cappuccino",
+                    "imagen": "img/gengibre.jpg",
+                    "alt": "Casita de gengibre",
                     "nombre": "Casita de gengibre",
                     "descripcion": "...",
-                    "precio": 45
+                    "precio": 55
                 }
-            ]
+            ],
+            "mostrar_en_inicio": false
         },
         {
             "id": "accesorios",
             "titulo": "Accesorios",
             "productos": [
                 {
-                    "imagen": "img\/concha.jpg",
+                    "imagen": "img/concha.jpg",
                     "alt": "Pendientes caracola",
                     "nombre": "Pendientes de caracola",
                     "descripcion": "...",
                     "precio": 5
                 },
                 {
-                    "imagen": "img\/circular.jpg",
+                    "imagen": "img/circular.jpg",
                     "alt": "Pendientes círculo",
                     "nombre": "Pendientes en círculo",
                     "descripcion": "...",
                     "precio": 5
                 },
                 {
-                    "imagen": "img\/pollera.jpg",
+                    "imagen": "img/pollera.jpg",
                     "alt": "Pendientes pollera",
                     "nombre": "Pendientes de pollera",
                     "descripcion": "...",
                     "precio": 6
                 },
                 {
-                    "imagen": "img\/yinyang.jpg",
+                    "imagen": "img/yinyang.jpg",
                     "alt": "Pendientes yin yang",
                     "nombre": "Pendientes con doble círculo",
                     "descripcion": "...",
                     "precio": 7
                 },
                 {
-                    "imagen": "img\/perla.jpg",
+                    "imagen": "img/perla.jpg",
                     "alt": "Pendientes con perla",
                     "nombre": "Pendientes con perla y estilo",
                     "descripcion": "...",
                     "precio": 8
                 },
                 {
-                    "imagen": "img\/accesorios.jpg",
+                    "imagen": "img/accesorios.jpg",
                     "alt": "Aretes de rosa",
                     "nombre": "Pendientes de rosa",
                     "descripcion": "Color amarillo",
                     "precio": 9
+                },
+                {
+                    "imagen": "img/yinyang.jpg",
+                    "alt": "Pendientes con dos aros",
+                    "nombre": "Pendientes con dos aros",
+                    "descripcion": "...",
+                    "precio": 7
+                }
+            ],
+            "imagen": "img/temporadas/1785875675_57a11da5956d1918.jpg"
+        },
+        {
+            "id": "chiqui_babys",
+            "titulo": "Chiqui Babys",
+            "imagen": "img/temporadas/1785875503_b36576450f2d462a.jpeg",
+            "productos": [
+                {
+                    "imagen": "img/peluches/conejo.jpg",
+                    "alt": "Conejo",
+                    "nombre": "La conejita",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 30
+                },
+                {
+                    "imagen": "img/peluches/conejo2.jpeg",
+                    "alt": "Conejo",
+                    "nombre": "La conejita con vestido",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/peluches/conejo3.jpeg",
+                    "alt": "Conejo",
+                    "nombre": "El conejito",
+                    "descripcion": "Altura: 9 pulg",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/peluches/abeja.jpg",
+                    "alt": "Abeja",
+                    "nombre": "Abeja",
+                    "descripcion": "Altura: 12 pulg",
+                    "precio": 50
+                },
+                {
+                    "imagen": "img/uploads/1785875812_bc38e38c783ef806.jpeg",
+                    "alt": "Osito",
+                    "nombre": "Osito",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/uploads/1785875834_be4e1e1abd22c5a2.jpeg",
+                    "alt": "La conejita",
+                    "nombre": "La conejita",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/uploads/1785875938_9ae3d73fb7d81aed.jpeg",
+                    "alt": "La coneja",
+                    "nombre": "La coneja",
+                    "descripcion": "...",
+                    "precio": 42
+                },
+                {
+                    "imagen": "img/uploads/1785875964_4f6e98b84f226b50.jpeg",
+                    "alt": "Abeja",
+                    "nombre": "Abeja",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/uploads/1785876068_ff07b1f856404e90.jpeg",
+                    "alt": "Oveja",
+                    "nombre": "Oveja",
+                    "descripcion": "...",
+                    "precio": 37
+                }
+            ],
+            "mostrar_en_inicio": true
+        },
+        {
+            "id": "personajes_top",
+            "titulo": "Personajes TOP",
+            "imagen": "img/temporadas/1785877666_7352b1a126bfe0a1.jpeg",
+            "productos": [
+                {
+                    "imagen": "img/uploads/1785875764_de7c3e72a84bf623.jpeg",
+                    "alt": "Baymax",
+                    "nombre": "Baymax",
+                    "descripcion": "...",
+                    "precio": 30
+                },
+                {
+                    "imagen": "img/uploads/1785875891_7d515ac283d87954.jpeg",
+                    "alt": "Mafalda",
+                    "nombre": "Mafalda",
+                    "descripcion": "...",
+                    "precio": 45
+                },
+                {
+                    "imagen": "img/peluches/gojogato.jpg",
+                    "alt": "Gojo Gato",
+                    "nombre": "Gojo Gato",
+                    "descripcion": "Altura: 13 pulg",
+                    "precio": 43
+                },
+                {
+                    "imagen": "img/peluches/ponyo.jpg",
+                    "alt": "Ponyo",
+                    "nombre": "Ponyo",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img/peluches/snoopytulipan.jpg",
+                    "alt": "Snoopy con tulipán",
+                    "nombre": "Snoopy con tulipán",
+                    "descripcion": "...",
+                    "precio": 35
+                },
+                {
+                    "imagen": "img/peluches/snoopypiloto.jpg",
+                    "alt": "Snoopy Piloto",
+                    "nombre": "Snoopy Piloto",
+                    "descripcion": "...",
+                    "precio": 28
+                },
+                {
+                    "imagen": "img/peluches/stitch.jpg",
+                    "alt": "Stitch",
+                    "nombre": "Stitch",
+                    "descripcion": "...",
+                    "precio": 34
+                },
+                {
+                    "imagen": "img/peluches/yoda.jpg",
+                    "alt": "Yoda",
+                    "nombre": "Yoda",
+                    "descripcion": "...",
+                    "precio": 20
+                },
+                {
+                    "imagen": "img/columpios/deadpool.jpeg",
+                    "alt": "Deadpool",
+                    "nombre": "Deadpool",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img/columpios/snoopy.jpg",
+                    "alt": "Snoopy",
+                    "nombre": "Snoopy",
+                    "descripcion": "...",
+                    "precio": 26
+                },
+                {
+                    "imagen": "img/columpios/spiderman.webp",
+                    "alt": "Spiderman",
+                    "nombre": "Spiderman",
+                    "descripcion": "...",
+                    "precio": 24
+                },
+                {
+                    "imagen": "img/columpios/Milesmorales.jpg",
+                    "alt": "Spiderman Miles Morales",
+                    "nombre": "Spiderman Miles Morales",
+                    "descripcion": "...",
+                    "precio": 24
                 }
             ]
         }

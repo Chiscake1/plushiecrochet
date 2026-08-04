@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  fetch('productos.json')
+  fetch('productos.json?v=' + new Date().getTime())
     .then(response => response.json())
     .then(data => {
       const contenedorProductos = document.getElementById("contenedor-productos");
@@ -46,7 +46,7 @@ function renderProductos(categorias, contenedor) {
 }
 
 function renderEntemporada(categorias, contenedor, requestedSeason) {
-  let html = `<h2 class="section-title fade-in" style="font-size: 2.2rem;">Échale un vistazo a nuestros productos en temporada</h2>`;
+  let html = `<h2 class="section-title fade-in" style="font-size: 2.2rem;">Échale un vistazo a nuestros productos del momento</h2>`;
   
   let categoriasAMostrar = [];
 
@@ -88,7 +88,7 @@ function renderEntemporada(categorias, contenedor, requestedSeason) {
       html += `</div></div>`;
     });
   } else {
-    html += `<p class="section-subtitle">Pronto tendremos nuevos productos para esta temporada.</p>`;
+    html += `<p class="section-subtitle">Pronto tendremos nuevos productos para este momento.</p>`;
   }
   
   contenedor.innerHTML = html;

@@ -259,6 +259,26 @@ elseif ($action === 'add_product') {
         sendResponse(false, 'No se encontró la categoría seleccionada.');
     }
 
+    // Gestionar adición a temporadas
+    if (isset($_POST['seasons_submitted'])) {
+        $selected_seasons = $_POST['seasons'] ?? [];
+        if (!is_array($selected_seasons)) $selected_seasons = [];
+        
+        $productoNuevo = [
+            'imagen' => $targetPath,
+            'alt' => $nombre,
+            'nombre' => $nombre,
+            'descripcion' => $desc ? $desc : "...",
+            'precio' => $precio
+        ];
+
+        foreach ($data['categorias_entemporada'] as &$season) {
+            if (in_array($season['id'], $selected_seasons)) {
+                $season['productos'][] = $productoNuevo;
+            }
+        }
+    }
+
     if (saveJsonData($data)) {
         sendResponse(true, 'Producto agregado exitosamente.');
     } else {
@@ -405,6 +425,10 @@ elseif ($action === 'edit_product') {
 
     $producto = &$data[$targetArrayKey][$foundCatIdx]['productos'][$product_idx];
     
+    // Almacenar valores originales para buscar en temporadas
+    $old_nombre = $producto['nombre'];
+    $old_imagen = $producto['imagen'];
+
     // Actualizar campos de texto
     $producto['nombre'] = $nombre;
     $producto['alt'] = $nombre;
@@ -418,6 +442,36 @@ elseif ($action === 'edit_product') {
             sendResponse(false, $uploadResult['error']);
         }
         $producto['imagen'] = $uploadResult['path'];
+    }
+
+    // Gestionar temporadas (solo si se envió desde el form de edición principal)
+    if (isset($_POST['seasons_submitted'])) {
+        $selected_seasons = $_POST['seasons'] ?? [];
+        if (!is_array($selected_seasons)) $selected_seasons = [];
+        
+        foreach ($data['categorias_entemporada'] as &$season) {
+            // Verificar si el producto ya está en esta temporada
+            $prod_idx_in_season = -1;
+            foreach ($season['productos'] as $s_idx => $s_prod) {
+                if ($s_prod['nombre'] === $old_nombre && $s_prod['imagen'] === $old_imagen) {
+                    $prod_idx_in_season = $s_idx;
+                    break;
+                }
+            }
+            
+            $is_selected = in_array($season['id'], $selected_seasons);
+            
+            if ($is_selected && $prod_idx_in_season === -1) {
+                // Agregar copia a la temporada
+                $season['productos'][] = $producto;
+            } elseif ($is_selected && $prod_idx_in_season !== -1) {
+                // Actualizar la copia que ya existe en la temporada
+                $season['productos'][$prod_idx_in_season] = $producto;
+            } elseif (!$is_selected && $prod_idx_in_season !== -1) {
+                // Quitar de la temporada
+                array_splice($season['productos'], $prod_idx_in_season, 1);
+            }
+        }
     }
 
     // Mover a otra sección si se especificó
@@ -445,6 +499,38 @@ elseif ($action === 'edit_product') {
 
     if (saveJsonData($data)) {
         sendResponse(true, 'Producto actualizado correctamente.');
+    } else {
+        sendResponse(false, 'Error al guardar los cambios en la base de datos.');
+    }
+}
+elseif ($action === 'delete_product') {
+    $categoria_raw = $_POST['categoria'] ?? '';
+    $product_idx = intval($_POST['product_idx'] ?? -1);
+
+    if (empty($categoria_raw) || $product_idx < 0) {
+        sendResponse(false, 'Faltan datos obligatorios para eliminar el producto.');
+    }
+
+    $data = getJsonData();
+    list($seccion, $catId) = explode('|', $categoria_raw);
+    $targetArrayKey = ($seccion === 'productos') ? 'categorias_productos' : 'categorias_entemporada';
+
+    $foundCatIdx = -1;
+    foreach ($data[$targetArrayKey] as $idx => $cat) {
+        if ($cat['id'] === $catId) {
+            $foundCatIdx = $idx;
+            break;
+        }
+    }
+
+    if ($foundCatIdx === -1 || !isset($data[$targetArrayKey][$foundCatIdx]['productos'][$product_idx])) {
+        sendResponse(false, 'No se encontró el producto especificado.');
+    }
+
+    array_splice($data[$targetArrayKey][$foundCatIdx]['productos'], $product_idx, 1);
+
+    if (saveJsonData($data)) {
+        sendResponse(true, 'Producto eliminado correctamente.');
     } else {
         sendResponse(false, 'Error al guardar los cambios en la base de datos.');
     }

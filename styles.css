@@ -383,7 +383,23 @@ a:hover {
   box-shadow: var(--shadow-soft);
   position: sticky;
   top: 100px;
-  height: fit-content;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+/* Scrollbar personalizado para la sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--bg-warm);
+  border-radius: 10px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
 }
 
 .sidebar h3 {

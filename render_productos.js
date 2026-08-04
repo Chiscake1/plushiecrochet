@@ -19,7 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function renderProductos(categorias, contenedor) {
   let html = "";
+  let sidebarHtml = "";
+  
   categorias.forEach(categoria => {
+    sidebarHtml += `<li><a href="#${categoria.id}">${categoria.titulo}</a></li>`;
+    
     html += `
       <section id="${categoria.id}" class="product-section fade-in">
         <h2>${categoria.titulo}</h2>
@@ -42,7 +46,10 @@ function renderProductos(categorias, contenedor) {
 
     html += `</div></section>`;
   });
+  
   contenedor.innerHTML = html;
+  const sidebar = document.getElementById("sidebar-categories");
+  if (sidebar) sidebar.innerHTML = sidebarHtml;
 }
 
 function renderEntemporada(categorias, contenedor, requestedSeason) {
